@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 작성자 : 전예진   -->
+<!--이클립스 주석 단측키 : 컨트롤 쉬프트 /
+action 에 서버의 주소를 설정할수있습니다
+  -->
+<head>
+  <meta charset="UTF-8">
+  <title>NC Dinos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <ul>
+      <li><img></li>
+      <li>
+        <img src=" assets/images//joinlogo.png" >
+        <h3>회원가입</h3>
+        <p>티켓예매, 포인트 등 다양한 혜택을 누리세요.</p>
+      </li>
+    </ul>
+
+    <div class="content">
+    <!--action에 서버의 주소를 설정할수있습니다
+    method속성은 get조회 post는 저장이다.  -->
+      <form onsubmit="return enter()" action="welcome.jsp" method="post">
+        <ul>
+          <li>아이디(필수)</li>
+          <li>
+            <input class="input_short" type="text" id="id" name="id" placeholder="아이디를 입력해 주세요" required>
+            <button>중복확인</button>
+          </li>
+
+          <li>비밀번호(필수)</li>
+          <li style=" font-size:small; padding-top: 0;">비밀번호는 6글자 이상입니다</li>
+          <li>
+         	 <input type="password" id="pswd" name="pswd" placeholder="비밀번호를 입력해 주세요" required>
+          </li>
+
+          <li>비밀번호 확인</li>
+          <input type="password" name="pswdCheck" id="pswdCheck" placeholder="비밀번호를 다시 한번 입력해주세요">
+          <li>이름(필수)</li>
+          <input type="text" id="name" name="name" placeholder="이름" required>
+
+          <li>생년월일(필수)</li>
+          <input type="text" id="birth" name="birth" placeholder="년도4자리-월2자리일2자리" required>
+
+          <li>성별(필수)</li>
+          <input class="input_radio" type="radio" id="gender1" name="gender" value="M" class="blind" placeholder=" 남자요">
+          <label for="gender1">남자</label>
+          <input class="input_radio" type="radio" id="gender2" name="gender" value="F" class="blind">
+          <label for="gender2">여자</label>
+
+          <li>전화번호(필수)</li>
+          <input type="tel" id="phone" name="phone" placeholder="연락처" required>
+
+          <li>이메일</li>
+          <input type="email" name="email" id="email" placeholder="이메일을 입력해 주세요" required>
+
+          <li>주소</li>
+          <li>
+            <input class="input_short" type="text" id="address1" name="address" placeholder="우편번호">
+            <button>검색</button>
+          </li>
+          <input type="text" id="address2" name="address" placeholder="주소">
+          <li><input type="text" id="address3" name="address" placeholder="주소 검색 후 상세주소를 입력해 주세요"></li>
+
+          <li>선호팀</li>
+          <select id="teamSelect">
+            <option value="" selected>선택하세요</option>
+            <option value="NC 다이노스">NC 다이노스</option>
+            <option value="LG 트윈스">LG 트윈스</option>
+            <option value="SSG 랜더스">SSG 랜더스</option>
+            <option value="KIA 타이거즈">KIA 타이거즈</option>
+            <option value="삼성 라이온즈">삼성 라이온즈</option>
+            <option value="KT 위즈">KT 위즈</option>
+            <option value="한화 이글스">한화 이글스</option>
+            <option value="롯데 자이언츠">롯데 자이언츠</option>
+            <option value="키움 히어로즈">키움 히어로즈</option>
+            <option value="두산 베어스">두산 베어스</option>
+          </select>
+
+        </ul>
+
+      </form>
+      <!-- content -->
+    </div>
+    <button type="submit" id="join" class="join">회원가입</button>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
